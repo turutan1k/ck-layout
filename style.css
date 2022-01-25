@@ -87,7 +87,16 @@ li {
 	flex-direction: column;
 	justify-content: center;
 }
-
+.anim-show{
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+.anim-show.active,
+.active.anim-show{
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
 /* Container */
 
 .wrapper {
@@ -108,12 +117,7 @@ li {
 	background: linear-gradient(to left, #0057A9, #00194D);
 	text-align: center;
 
-	opacity: 0;
 	transition: all 1s ease 0s;
-}
-
-.header__inner.active {
-	opacity: 1;
 }
 
 .header {
@@ -162,25 +166,26 @@ li {
 	width: 70vh;
 	width: 100%;
 	background: linear-gradient(to left, #0057A9, #00194D);
-	opacity: 0;
 	transition: all 1s ease 0s;
-}
-
-.banner.active {
-	opacity: 1;
 }
 
 /* Nav */
 .menu__body {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	padding: 20px 0px;
 }
 
 .menu__list {
-	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
+
+.menu__list li{
+	transform: translate(0px, -40px);
+	transition: all 0.3s ease 0s;
+	opacity: 0;
+}
+
 
 .menu__link {
 	align-items: center;
@@ -189,10 +194,6 @@ li {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 16px;
-
-	transform: translate(0%, -90px);
-	transition: all 0.3s ease 0s;
-	opacity: 0;
 }
 
 .link {
@@ -200,27 +201,27 @@ li {
 	color: #ffffff;
 }
 
-.menu__link.active:nth-child(1) {
+.menu__list.active li:nth-child(1) {
 	transition: all 1s ease 0s;
 }
 
-.menu__link.active:nth-child(2) {
+.menu__list.active li:nth-child(2) {
 	transition: all 1s ease 0.1s;
 }
 
-.menu__link.active:nth-child(3) {
+.menu__list.active li:nth-child(3) {
 	transition: all 1s ease 0.2s;
 }
 
-.menu__link.active:nth-child(4) {
+.menu__list.active li:nth-child(4) {
 	transition: all 1s ease 0.3s;
 }
 
-.menu__link.active:nth-child(5) {
+.menu__list.active li:nth-child(5) {
 	transition: all 1s ease 0.4s;
 }
 
-.menu__link.active {
+.menu__list.active li {
 	transform: translate(0px, 0px);
 	opacity: 1;
 }
@@ -238,7 +239,7 @@ li {
 
 .banner__info {
 	border-right: 4px solid #ffffff;
-	transform: translate(-300px, 0px);
+	transform: translate(-250px, 0px);
 	opacity: 0;
 	transition: all 2s ease 0.4s;
 }
@@ -263,7 +264,7 @@ li {
 .banner__img {
 	width: 420px;
 	height: 320px;
-	transform: translate(300px, 0%);
+	transform: translate(250px, 0%);
 	opacity: 0;
 	transition: all 2s ease 0.4s;
 }
@@ -637,6 +638,12 @@ li {
 	justify-content: space-between;
 }
 
+.footer__list li{
+	transition: opacity 0.1s linear;
+	transform: translate(0px, -30px);
+	opacity: 0;
+}
+
 .footer__link {
 	align-items: center;
 	justify-content: center;
@@ -645,16 +652,6 @@ li {
 	letter-spacing: 2px;
 	font-size: 14px;
 	color: rgba(255, 255, 255, 0.8);
-
-	transition: opacity 0.1s linear;
-	transform: translate(0px, 30px);
-	opacity: 0;
-}
-
-.footer__link.active {
-	transform: translate(0%, 0px);
-	transition: opacity 0.1s linear;
-	opacity: 1;
 }
 
 .footer__link:hover {
@@ -662,28 +659,34 @@ li {
 	text-shadow: 0px 1px 20px rgba(0, 0, 0, 1);
 }
 
-.footer__link.active:nth-child(1) {
+.footer__list.active li:nth-child(1) {
 	transition: all 1s ease 0s;
 }
 
-.footer__link.active:nth-child(2) {
+.footer__list.active li:nth-child(2) {
 	transition: all 1s ease 0.1s;
 }
 
-.footer__link.active:nth-child(3) {
+.footer__list.active li:nth-child(3) {
 	transition: all 1s ease 0.2s;
 }
 
-.footer__link.active:nth-child(4) {
+.footer__list.active li:nth-child(4) {
 	transition: all 1s ease 0.3s;
 }
 
-.footer__link.active:nth-child(5) {
+.footer__list.active li:nth-child(5) {
 	transition: all 1s ease 0.4s;
 }
 
-.footer__link.active:nth-child(6) {
+.footer__list.active li:nth-child(6) {
 	transition: all 1s ease 0.5s;
+}
+
+.footer__list.active li{
+	transform: translate(0%, 0px);
+	transition: opacity 0.1s linear;
+	opacity: 1;
 }
 
 .footer__copyright {
@@ -694,7 +697,7 @@ li {
 	color: rgba(255, 255, 255, 0.3);
 	padding: 10px 0px;
 
-	transform: translate(0%, 5px);
+	transform: translate(0%, -5px);
 	transition: opacity 0.1s linear;
 	opacity: 0.2;
 }
@@ -839,6 +842,8 @@ li {
 	.teachers__desc {
 		align-items: center;
 		justify-content: flex-end;
+		margin: 0px;
+		padding: 20px 0px;
 	}
 
 	.teachers__subtitle {
@@ -1065,6 +1070,12 @@ li {
 	.teachers__personal-link {
 		font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1170 - 320)));
 		margin: calc(5px + (20 - 5) * ((100vw - 320px) / (1170 - 320)));
+	}
+
+	.teachers__item{
+		margin:0px;
+		margin-top: calc(25px + (100 - 25) * ((100vw - 320px) / (1170 - 320)));
+		margin-bottom: calc(25px + (100 - 25) * ((100vw - 320px) / (1170 - 320)));
 	}
 
 	.footer__link{
