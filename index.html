@@ -4,14 +4,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<!-- description  -->
+	<meta name="description" content="">
+	<!-- keywords max=20 -->
+	<meta name="keywords" content="">
+
+	<meta name="Author" content="">
+	<meta name="Copyright" content="Филиал `Минский радиотехнический колледж`">
+	<meta name="Adress" content="220005, г.Минск, пр.Независимости, 62.">
+
 	<title>Программное обеспечение информационных технологий&nbsp;| МРК-БГУИР</title>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;700&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="/style.css" />
+	<link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
@@ -20,37 +29,36 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__logo anim-items anim-no-hide">
-					<img src="/assets/img/logo/logo.png" alt="Логотип МРК" title="Логотип МРК" class="header__img">
+					<img src="./assets/img/logo/logo.png" alt="Логотип МРК" title="Логотип МРК" class="header__img">
 					<h2 class="header__text">
 						БГУИР Филиал &laquo;Минский радиотехнический колледж&raquo;
 					</h2>
+					<div class="header__icon">
+						<span></span>
+					</div>
 				</div>
-				<!-- <div class="header__icon">
-					<span></span>
-				</div> -->
 			</div>
+			
 			<div class="header__inner  anim-items anim-no-hide">
 				<div class="container">
-					<nav class="header__nav">
-						<ul class="header__list">
+					<nav class="menu__body">
 							<li><a data-goto=".content-disciplines" href="#"
-									class="banner__link link anim-items anim-no-hide">Читаемые
+									class="menu__link link anim-items anim-no-hide">Читаемые
 									дисциплины</a></li>
 							<li><a data-goto=".content-practice" href="#"
-									class="banner__link link anim-items anim-no-hide">Практика</a>
+									class="menu__link link anim-items anim-no-hide">Практика</a>
 							</li>
 							<li><a data-goto=".content-teachers" href="#"
-									class="banner__link link anim-items anim-no-hide">Преподаватели</a>
+									class="menu__link link anim-items anim-no-hide">Преподаватели</a>
 							</li>
 							<li><a data-goto=".content-consultations" href="#"
-									class="banner__link link anim-items anim-no-hide">График
+									class="menu__link link anim-items anim-no-hide">График
 									дополнительных
 									консультаций</a></li>
 							<li><a data-goto=".content-design" href="#"
-									class="banner__link link anim-items anim-no-hide">Курсовое и
+									class="menu__link link anim-items anim-no-hide">Курсовое и
 									дипломное
 									проектирование</a></li>
-						</ul>
 					</nav>
 				</div>
 			</div>
@@ -63,7 +71,7 @@
 						<h1 class="info__desc">Программное Обеспечение Информационных Технологий</h1>
 					</div>
 					<img alt="Логотип ЦК МРК, бинарные числа" title="Логотип ЦК МРК"
-						class="banner__img anim-items anim-no-hide" src="assets/img/binary.png">
+						class="banner__img anim-items anim-no-hide" src="./assets/img/binary.png">
 				</div>
 			</div>
 		</section>
@@ -85,7 +93,7 @@
 						<p class="content__desc anim-items anim-no-hide">За цикловой комиссией &laquo;Программное
 							обеспечение
 							информационных технологий&raquo; закреплены следующие учебные дисциплины:</p>
-						<div class="disciplines__inner content-grid">
+						<div class="disciplines__inner content-flex">
 							<h3 class="disciplines__text anim-items anim-no-hide">Веб-программирование на&nbsp;стороне
 								сервера</h3>
 							<h3 class="disciplines__text anim-items anim-no-hide">Базы данных и&nbsp;системы управления
@@ -121,7 +129,7 @@
 						<h2 class="content__title anim-items anim-no-hide">Практика</h2>
 						<p class="content__desc anim-items anim-no-hide">Цикловая комиссия обеспечивает также проведение
 							учебных и&nbsp;производственных практик, предусмотренных учебными планами:</p>
-						<div class="practice__inner content-grid">
+						<div class="practice__inner content-flex">
 							<h3 class="practice__text anim-items anim-no-hide">Практика по&nbsp;программированию</h3>
 							<h3 class="practice__text anim-items anim-no-hide">Практика по&nbsp;разработке
 								и&nbsp;сопровождению&nbsp;ПО</h3>
@@ -134,11 +142,11 @@
 						<h2 class="content__title anim-items anim-no-hide">Преподаватели</h2>
 						<p class="content__desc anim-items anim-no-hide">Состав цикловой комиссии &laquo;Программное
 							обеспечение информационных технологий&raquo;:</p>
-						<div class="teachers__inner content-grid">
-							<div class="teachers__item content-grid anim-items anim-no-hide">
+						<div class="teachers__inner content-flex">
+							<div class="teachers__item content-flex anim-items anim-no-hide">
 								<div class="teachers__img anim-items anim-no-hide">
 									<img alt="Лазицкас Екатерина Александровна МРК"
-										title="Лазицкас Екатерина Александровна" src="assets/img/poit/lazickas.jpg">
+										title="Лазицкас Екатерина Александровна" src="./assets/img/poit/lazickas.jpg">
 								</div>
 								<div class="teachers__desc anim-items anim-no-hide">
 									<h3 class="teachers__title anim-items anim-no-hide">Лазицкас Екатерина Александровна
@@ -151,12 +159,12 @@
 										страница</button>
 								</div>
 							</div>
-							<div class="teachers__item content-grid anim-items anim-no-hide">
+							<div class="teachers__item content-flex anim-items anim-no-hide">
 								<div class="teachers__img anim-items anim-no-hide">
 									<img alt="Буянова Светлана Григорьевна МРК" title="Буянова Светлана Григорьевна"
-										src="assets/img/poit/buyanova.jpg">
+										src="./assets/img/poit/buyanova.jpg">
 								</div>
-								<div class="teachers__desc content-grid anim-items anim-no-hide">
+								<div class="teachers__desc content-flex anim-items anim-no-hide">
 									<h3 class="teachers__title anim-items anim-no-hide">Буянова Светлана Григорьевна
 									</h3>
 									<h4 class="teachers__subtitle anim-items anim-no-hide">Преподаватель первой
@@ -168,10 +176,10 @@
 										страница</button>
 								</div>
 							</div>
-							<div class="teachers__item content-grid anim-items anim-no-hide">
+							<div class="teachers__item content-flex anim-items anim-no-hide">
 								<div class="teachers__img anim-items anim-no-hide">
 									<img alt="Виничук Ольга Николаевна МРК" title="Виничук Ольга Николаевна"
-										src="assets/img/poit/vinichuk.jpg">
+										src="./assets/img/poit/vinichuk.jpg">
 								</div>
 								<div class="teachers__desc anim-items anim-no-hide">
 									<h3 class="teachers__title anim-items anim-no-hide">Виничук Ольга Николаевна</h3>
@@ -184,10 +192,10 @@
 										страница</button>
 								</div>
 							</div>
-							<div class="teachers__item content-grid anim-items anim-no-hide">
+							<div class="teachers__item content-flex anim-items anim-no-hide">
 								<div class="teachers__img anim-items anim-no-hide">
 									<img alt="Карпович Дарья Валерьевна МРК" title="Карпович Дарья Валерьевна"
-										src="assets/img/poit/karpovich.jpg">
+										src="./assets/img/poit/karpovich.jpg">
 								</div>
 								<div class="teachers__desc anim-items anim-no-hide">
 									<h3 class="teachers__title anim-items anim-no-hide">Карпович Дарья Валерьевна</h3>
@@ -200,10 +208,10 @@
 										страница</button>
 								</div>
 							</div>
-							<div class="teachers__item content-grid anim-items anim-no-hide">
+							<div class="teachers__item content-flex anim-items anim-no-hide">
 								<div class="teachers__img anim-items anim-no-hide">
 									<img alt="Сальникова Елена Александровна МРК" title="Сальникова Елена Александровна"
-										src="assets/img/poit/salnikova.jpg">
+										src="./assets/img/poit/salnikova.jpg">
 								</div>
 								<div class="teachers__desc anim-items anim-no-hide">
 									<h3 class="teachers__title anim-items anim-no-hide">Сальникова Елена Александровна
@@ -217,10 +225,10 @@
 										страница</button>
 								</div>
 							</div>
-							<div class="teachers__item content-grid anim-items anim-no-hide">
+							<div class="teachers__item content-flex anim-items anim-no-hide">
 								<div class="teachers__img anim-items anim-no-hide">
 									<img alt="Терешко Ольга Ивановна МРК" title="Терешко Ольга Ивановна"
-										src="assets/img/poit/tereshko.jpg">
+										src="./assets/img/poit/tereshko.jpg">
 								</div>
 								<div class="teachers__desc anim-items anim-no-hide">
 									<h3 class="teachers__title anim-items anim-no-hide">Терешко Ольга Ивановна</h3>
@@ -249,7 +257,7 @@
 				<section class="footer__content">
 					<!-- ! Иконки добавлять через background-img -->
 					<div class="footer__body">
-						<ul class="footer__list footer-grid">
+						<ul class="footer__list">
 							<li><a href="https://mrk-bsuir.by/ru/content/istoriya-mrk"
 									class="footer__link link anim-items anim-no-hide">О&nbsp;колледже</a></li>
 							<li><a href="https://mrk-bsuir.by/ru/content/uchashchimsya"

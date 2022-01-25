@@ -71,7 +71,7 @@ function addElement(e){
 
 //Navigation
 
-const menuLinks = document.querySelectorAll('.banner__link[data-goto]');
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {
@@ -84,6 +84,15 @@ if (menuLinks.length > 0) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 			
+            if(iconMenu.classList.contains('_active')){
+                document.body.classList.remove('_lock')
+                iconMenu.classList.remove('_active');
+                menuBody.classList.remove('_active');
+                menuHeader.classList.remove('fixed');
+            }
+
+
+
 			window.scrollTo({
 				top: gotoBlockValue,
 				behavior:"smooth"
@@ -92,6 +101,22 @@ if (menuLinks.length > 0) {
 		}
 	}
 
+}
+
+//menu burger
+
+const iconMenu = document.querySelector('.header__icon');
+const menuBody = document.querySelector('.menu__body');
+const menuHeader = document.querySelector('.header');
+const changeImg = document.querySelector('.header__img')
+const headerText = document.querySelector('.header__text');
+if (iconMenu){
+    iconMenu.addEventListener("click", function(e){
+        document.body.classList.toggle('_lock')
+        iconMenu.classList.toggle('_active');
+        menuBody.classList.toggle('_active');
+        menuHeader.classList.toggle('fixed');
+    });
 }
 
 
