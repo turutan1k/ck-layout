@@ -802,6 +802,9 @@ li {
 		z-index: 10;
 	}
 
+	.menu__list{
+		flex-direction: column;
+	}
 	.menu__list>li {
 		margin: 0px 0px 30px 0px;
 	}
@@ -818,14 +821,13 @@ li {
 		padding: 0px 5px;
 	}
 
-	.menu__body {
-		display: none;
-	}
-
 	.banner__inner{
 		padding: 10% 2%;
 	}
 	
+	.menu__link{
+		font-size: 22px;
+	}
 	.teachers__img {
 		width: calc(320px + (360 - 320) * ((100vw - 320px) / (1170 - 320)));
 		height: calc(320px + (300 - 320) * ((100vw - 320px) / (1170 - 320)));
